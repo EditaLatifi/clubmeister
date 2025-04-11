@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
         <meta property="og:title" content="Clubmeister" />
         <meta
           property="og:description"
-          content="Explore R&R Rent A Car for affordable and reliable car rentals. Book your vehicle today and enjoy exceptional service and a smooth ride!"
+          content="Clubmeister!"
         />
         <meta property="og:image" content="/public/logo.png" /> {/* Replace with the path to your OG image */}
         <meta property="og:url" content="" />
