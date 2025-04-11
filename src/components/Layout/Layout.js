@@ -9,32 +9,32 @@ const Layout = ({ children }) => {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>R&R Rent A Car - Affordable & Reliable Car Rentals</title>
+        <title>Clubmeister</title>
         <meta
           name="description"
-          content="Explore R&R Rent A Car for affordable and reliable car rentals. Book your vehicle today and enjoy exceptional service and a smooth ride!"
+          content=" !"
         />
         <meta
           name="keywords"
-          content="R&R Rent A Car, car rentals, affordable cars, reliable car hire, rent a car Kosovo, vehicle rental service"
+          content="CM"
         />
-        <meta property="og:title" content="R&R Rent A Car - Affordable & Reliable Car Rentals" />
+        <meta property="og:title" content="Clubmeister" />
         <meta
           property="og:description"
           content="Explore R&R Rent A Car for affordable and reliable car rentals. Book your vehicle today and enjoy exceptional service and a smooth ride!"
         />
-        <meta property="og:image" content="/logo.png" /> {/* Replace with the path to your OG image */}
-        <meta property="og:url" content="https://rr-rentacar.com" />
+        <meta property="og:image" content="/public/logo.png" /> {/* Replace with the path to your OG image */}
+        <meta property="og:url" content="" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="R&R Rent A Car - Affordable & Reliable Car Rentals" />
+        <meta name="twitter:title" content="Clubmeister" />
         <meta
           name="twitter:description"
-          content="Explore R&R Rent A Car for affordable and reliable car rentals. Book your vehicle today and enjoy exceptional service and a smooth ride!"
+          content="Clubmeister"
         />
         <meta name="twitter:image" content="/logo.png" /> {/* Replace with the path to your Twitter image */}
-        <link rel="icon" href="/logo.png" /> {/* Replace with your favicon */}
-        <link rel="canonical" href="https://rr-rentacar.com" />
+        <link rel="icon" href="/public/logo.png" /> {/* Replace with your favicon */}
+        <link rel="canonical" href="Clubmeister" />
       </Head>
       <Header />
       <div>{children}</div>

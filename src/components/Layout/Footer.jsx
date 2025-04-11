@@ -1,97 +1,55 @@
-import React from "react";
-import Link from "next/link";
-import {
-    BsGeoAlt,
-    BsTelephone,
-    BsEnvelope
-  } from "react-icons/bs";
-  import {
-    FaFacebook,
-    FaInstagram,
-    FaTiktok,
-    FaAirbnb,
-    FaPaypal,
-    FaCcVisa,
-    FaCcMastercard
-  } from "react-icons/fa";
-  
+import Image from "next/image";
+import logo from "/public/logo-yellow.png";
+import { FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa";
+
 const Footer = () => {
- 
-
   return (
-    <footer className="bg-[#0f3039] text-white py-10">
-      <div className="container mx-auto lg:px-24 sm:px-4 py-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Contact Info Section */}
-          <div>
-            <h1 className="text-2xl font-bold mb-4">eqew</h1>
-            <div className="space-y-2">
-              <div className="flex items-center">
-                <BsEnvelope className="mr-2" />
-                <p>dasda</p>
-              </div>
-              <div className="flex items-center">
-                <BsTelephone className="mr-2" />
-                <p>ddasd</p>
-              </div>
-              <div className="flex items-center">
-                <BsTelephone className="mr-2" />
-                <p>eqweq</p>
-              </div>
-              <div className="flex items-center">
-                <BsGeoAlt className="mr-2" />
-                <p>
-                 eqwe
-                  <Link href="#" className="underline">
-            eqwe
-                  </Link>
-                </p>
-              </div>
-            </div>
+    <footer className="bg-[#6D011C] text-white">
+      {/* Top Section */}
+      <div className="max-w-[1350px] mx-auto px-4 py-[40px] flex flex-col gap-10">
+        {/* Logo + Description */}
+        <div className="space-y-[20px]">
+          <div className="flex items-center lg:ml-[-20px] ml-0 justify-center lg:justify-start">
+            <Image
+              src={logo}
+              alt="ClubMeister Logo"
+              width={300}
+              height={80}
+              className="w-[200px] sm:w-[280px] lg:w-[500px] h-auto"
+            />
           </div>
+          <p className="text-[#FFFFFF] max-w-[580px] text-[16px] sm:text-[20px] lg:text-[24px] leading-[24px] sm:leading-[26px] lg:leading-[28px] font-poppins text-center lg:text-left">
+            Streamline membership, finances, and documents with ClubMeister – the ultimate platform for<br className="hidden sm:block" /> managing your club with ease.
+          </p>
+        </div>
 
-          {/* Useful Links Section */}
-          <div>
-            <h4 className="font-semibold text-lg mb-4">wqeqw</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/about-us" className="hover:underline">
-              eqeq
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="hover:underline">
-                eqwe
-                </Link>
-              </li>
-              <li>
-                <Link href="/cookie-policy" className="hover:underline">
-                eqwe
-                </Link>
-              </li>
-            </ul>
-          </div>
+        {/* Menu */}
+        <ul className="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 text-[14px] sm:text-[15px] lg:text-[16px] font-poppins border-b border-[#D9D9D9] mt-[10px] pb-4 w-full">
+          <li className="font-semibold">Home</li>
+          <li>About</li>
+          <li>Portfolio</li>
+          <li>Services</li>
+          <li>Our Process</li>
+          <li>Contact Us</li>
+          <li>Impressum</li>
+        </ul>
 
-          {/* Social Media Section */}
-          <div>
-            <h4 className="font-semibold text-lg mb-4">eqwe</h4>
-            <div className="flex space-x-4">
-              <Link href="https://www.facebook.com/profile.php?id=61561708601034" className="text-xl">
-                <FaFacebook />
-              </Link>
-              <Link href="https://www.instagram.com/r_r_rent_a_car/" className="text-xl">
-                <FaInstagram />
-              </Link>
-            </div>
+        {/* Bottom Line: Location + Icons */}
+        <div className="flex flex-col-reverse sm:flex-row justify-between items-center w-full gap-4">
+        <p className="text-[13px] sm:text-[14px] font-poppins text-center sm:text-left">
+            Made in Switzerland
+          </p>
+          <div className="flex items-center gap-4">
+            <FaLinkedinIn className="text-white hover:text-[#F5E7B8] cursor-pointer text-lg" />
+            <FaInstagram className="text-white hover:text-[#F5E7B8] cursor-pointer text-lg" />
+            <FaFacebookF className="text-white hover:text-[#F5E7B8] cursor-pointer text-lg" />
           </div>
         </div>
       </div>
 
-      {/* Copyright Section */}
-      <div className="border-t border-gray-700 mt-8 pt-4 text-center">
-        <p>
-          &copy; {new Date().getFullYear()} weqeqw. wqeqw
-        </p>
+      {/* Bottom Bar */}
+      <div className="bg-[#590016] text-center py-4 text-[13px] sm:text-[15px] text-white font-poppins">
+        Copyright © 2025 Clubmeister | Powered by Berna Consulting
       </div>
     </footer>
   );
