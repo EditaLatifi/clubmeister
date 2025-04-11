@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "/public/logo.png"; 
+import logo from "/public/logo3.svg"; 
 import logo1 from "/public/logo1.png"
 import { Menu, X } from "lucide-react"; 
 
@@ -12,7 +12,7 @@ const Header = () => {
     <header className="bg-[#FFFFFF] max-w-[1350px] mx-auto w-full flex items-center justify-between px-2 py-8">
       <Link href="/">
         <div className="flex items-center gap-2">
-        <Image src={logo} alt="Logo" width={289} height={48.06} />
+        <Image src={logo} alt="Logo" width={289} height={48.06} className="w-[200px] md:w-[289px]"/>
         </div>
       </Link>
 

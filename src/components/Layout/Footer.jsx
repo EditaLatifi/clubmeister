@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "/public/logo-yellow.png";
+import logo from "/public/logo-yellow.svg";
 import { FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa";
 
 const Footer = () => {
@@ -9,16 +9,16 @@ const Footer = () => {
       <div className="max-w-[1350px] mx-auto px-4 py-[40px] flex flex-col gap-10">
         {/* Logo + Description */}
         <div className="space-y-[20px]">
-          <div className="flex items-center lg:ml-[-20px] ml-0 justify-center lg:justify-start">
+          <div className="lg:mt-[100px] flex items-center lg:ml-[-20px] ml-0 justify-center lg:justify-start">
             <Image
               src={logo}
               alt="ClubMeister Logo"
               width={300}
               height={80}
-              className="w-[200px] sm:w-[280px] lg:w-[500px] h-auto"
+              className="w-[200px] sm:w-[280px] lg:ml-6 lg:w-[500px] h-auto lg:mb-[30px]"
             />
           </div>
-          <p className="text-[#FFFFFF] max-w-[580px] text-[16px] sm:text-[20px] lg:text-[24px] leading-[24px] sm:leading-[26px] lg:leading-[28px] font-poppins text-center lg:text-left">
+          <p className="text-[#FFFFFF]  max-w-[580px] text-[16px] sm:text-[20px] lg:text-[22px] leading-[24px] sm:leading-[26px] lg:leading-[28px] font-poppins text-center lg:text-left">
             Streamline membership, finances, and documents with ClubMeister – the ultimate platform for<br className="hidden sm:block" /> managing your club with ease.
           </p>
         </div>
@@ -35,7 +35,7 @@ const Footer = () => {
         </ul>
 
         {/* Bottom Line: Location + Icons */}
-        <div className="flex flex-col-reverse sm:flex-row justify-between items-center w-full gap-4">
+        <div className="lg:mb-[70px] flex flex-col-reverse sm:flex-row justify-between items-center w-full gap-4">
         <p className="text-[13px] sm:text-[14px] font-poppins text-center sm:text-left">
             Made in Switzerland
           </p>
