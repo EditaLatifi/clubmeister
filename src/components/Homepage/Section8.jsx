@@ -59,7 +59,7 @@ const Section8 = () => {
         <h2 className="font-poppins font-semibold text-[52px] leading-[100%]">
           What <span className="text-[#6D011C]">Our Clients</span><br /> Say About Us?
         </h2>
-        <p className="text-[#616161] font-poppins text-[24px] font-[400] max-w-[450px]">
+        <p className="text-[#616161] font-poppins text-[20px] lg:text-[24px] font-[400] max-w-[450px]">
         At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi,
         </p>
 
@@ -95,8 +95,8 @@ const Section8 = () => {
       <div className="-mx-[30px]">
         <Slider ref={sliderRef} {...settings}>
           {testimonials.map((t, index) => (
-         <div key={index} className="px-[15px] ">
-         <div className="w-[445px] h-[538px]  pt-[90px] pb-[90px] px-[80px] rounded-[10px] border border-gray-200 bg-white shadow-sm flex flex-col items-center text-center  space-y-[40px]">
+         <div key={index} className="px-[15px] ml-4 lg:ml-0">
+         <div className="w-[90%] lg:w-[445px] lg:h-[538px] p-4 md:pt-[90px] mb:pb-[90px] mb:px-[80px] rounded-[10px] border border-gray-200 bg-white shadow-sm flex flex-col items-center text-center  space-y-[40px]">
            <div className="flex flex-col items-center space-y-[16px]">
              <Image
                src={avatar}
@@ -110,7 +110,7 @@ const Section8 = () => {
                <p className="text-[#64748B] text-[20px] leading-[24px]">{t.role}</p>
              </div>
            </div>
-           <blockquote className="text-[#0F172A] text-[24px] leading-[28px] font-[500] font-poppins max-w-[350px]">
+           <blockquote className="text-[#0F172A] text-[20px] lg:text-[24px] lg:leading-[28px] font-[500] font-poppins max-w-[350px]">
              “{t.message}”
            </blockquote>
          </div>
