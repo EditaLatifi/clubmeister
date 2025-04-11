@@ -17,7 +17,7 @@ const Hero = () => {
         </div>
 
         {/* Headline */}
-        <h1 className="font-montserrat font-bold text-[36px] md:text-[52px] leading-tight md:leading-[63px]">
+        <h1 className="text-black font-montserrat font-bold text-[36px] md:text-[52px] leading-tight md:leading-[63px]">
           Effortless Club <br />
           Management, <span className="text-[#6D011C]">All in One Place</span>
         </h1>

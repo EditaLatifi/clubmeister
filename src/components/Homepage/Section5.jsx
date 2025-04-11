@@ -9,7 +9,7 @@ const Section5 = () => {
       {/* Header */}
       <div className="text-center space-y-4">
         <p className="text-[#6D011C] text-[18px] font-poppins font-medium">What we Offer</p>
-        <h2 className="text-[36px] md:text-[52px] font-poppins font-bold leading-[120%]">
+        <h2 className="text-black text-[36px] md:text-[52px] font-poppins font-bold leading-[120%]">
           All-in-One Club Management – <br />
           <span className="text-[#6D011C]">Simplified & Efficient.</span>
         </h2>

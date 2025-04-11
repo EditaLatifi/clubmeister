@@ -42,7 +42,7 @@ const Section7 = () => {
       {/* Heading */}
       <div className="text-center mb-[80px] space-y-[16px]">
         <p className="text-[#6D011C] text-[24px] font-poppins font-medium">FAQ’s</p>
-        <h2 className="text-[36px] md:text-[52px] font-poppins font-bold leading-[120%]">
+        <h2 className="text-black text-[36px] md:text-[52px] font-poppins font-bold leading-[120%]">
           <span className="text-[#6D011C]">Frequently asked questions</span><br />
           about the Clubmeister software
         </h2>

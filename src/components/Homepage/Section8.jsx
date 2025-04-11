@@ -56,7 +56,7 @@ const Section8 = () => {
       {/* Left Sticky Content */}
       <div className="lg:sticky top-[100px] self-start space-y-6">
         <p className="text-[#6D011C] font-poppins font-medium text-[24px]">Testimonials</p>
-        <h2 className="font-poppins font-semibold text-[52px] leading-[100%]">
+        <h2 className="text-black font-poppins font-semibold text-[52px] leading-[100%]">
           What <span className="text-[#6D011C]">Our Clients</span><br /> Say About Us?
         </h2>
         <p className="text-[#616161] font-poppins text-[20px] lg:text-[24px] font-[400] max-w-[450px]">

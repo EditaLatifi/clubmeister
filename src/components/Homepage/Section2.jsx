@@ -11,7 +11,7 @@ const Section2 = () => {
   <p className="text-[#6D011C] font-poppins font-[500] text-[24px] leading-[150%] ">
   Our clients – numbers
 </p>
-    <h2 className="text-[36px] md:text-[52px] font-montserrat font-bold leading-[130%]">
+    <h2 className="text-black text-[36px] md:text-[52px] font-montserrat font-bold leading-[130%]">
       Powering Clubs with <br />
       <span className="text-[#6D011C]">Data-Driven Success</span>
     </h2>

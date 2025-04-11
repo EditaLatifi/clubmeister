@@ -10,7 +10,7 @@ const Section4 = () => {
       {/* Title */}
       <div className="text-center space-y-4 mb-12">
         <p className="text-[#6D011C] text-[24px] font-poppins font-medium">What Choose Us</p>
-        <h2 className="font-poppins font-semibold text-[40px] lg:text-[52px] leading-[100%]">
+        <h2 className="text-black font-poppins font-semibold text-[40px] lg:text-[52px] leading-[100%]">
           Why Choose <span className="text-[#6D011C]">ClubMeister</span>?
         </h2>
       </div>
