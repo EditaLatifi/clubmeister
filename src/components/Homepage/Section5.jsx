@@ -19,13 +19,13 @@ const Section5 = () => {
       <div className="max-w-[1250px] mx-auto rounded-[30px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.25)] p-[20px] lg:px-[112px] lg:py-[89px] flex flex-col lg:flex-row gap-[30px] lg:gap-[60px] items-center">
       {/* Text */}
         <div className="flex-1 space-y-4">
-          <h3 className="text-[36px] font-semibold font-poppins text-[#6D011C]">
+          <h3 className="text-[30px] lg:text-[36px] font-semibold font-poppins text-[#6D011C]">
             1. Member Management
           </h3>
           <p className="font-poppins font-[500] text-[20px] text-[#333]">
             Effortlessly handle memberships, track renewals, and communicate with members—all in one place.
           </p>
-          <ul className="text-[#333] font-poppins font-[500] text-[20px] space-y-2">
+          <ul className="text-[#333] font-poppins font-[500] text-[18px] lg:text-[20px] space-y-2">
           <li>✅  Automated Membership Renewals</li>
             <li>✅  Member Directory & Profiles
             </li>
@@ -45,13 +45,13 @@ const Section5 = () => {
           <Image src={img2} alt="Accounting & Invoicing" width={500} height={400} />
         </div>
       <div className="flex-1 space-y-4">
-          <h3 className="text-[36px] font-semibold font-poppins text-[#6D011C]">
+          <h3 className="text-[30px] lg:text-[36px] font-semibold font-poppins text-[#6D011C]">
             2. Accounting & Invoicing
           </h3>
           <p className="font-poppins font-[500] text-[20px] text-[#333]">
             Keep your club’s finances in check with automated invoicing and real-time financial tracking.
           </p>
-          <ul className="text-[#333] font-poppins font-[500] text-[20px] space-y-2">
+          <ul className="text-[#333] font-poppins font-[500] text-[18px] lg:text-[20px] space-y-2">
             <li>✅  Automated Membership Renewals</li>
             <li>✅  Member Directory & Profiles
             </li>
@@ -65,13 +65,13 @@ const Section5 = () => {
       <div className="lg:hidden block max-w-[1250px] mx-auto rounded-[30px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.25)] p-[20px] lg:px-[112px] lg:py-[89px] flex flex-col lg:flex-row gap-[30px] lg:gap-[60px] items-center">
     
       <div className="flex-1 space-y-4">
-          <h3 className="text-[36px] font-semibold font-poppins text-[#6D011C]">
+          <h3 className="text-[30px] lg:text-[36px] font-semibold font-poppins text-[#6D011C]">
             2. Accounting & Invoicing
           </h3>
           <p className="font-poppins font-[500] text-[20px] text-[#333]">
             Keep your club’s finances in check with automated invoicing and real-time financial tracking.
           </p>
-          <ul className="text-[#333] font-poppins font-[500] text-[20px] space-y-2">
+          <ul className="text-[#333] font-poppins font-[500] text-[18px] lg:text-[20px] space-y-2">
             <li>✅  Automated Membership Renewals</li>
             <li>✅  Member Directory & Profiles
             </li>
