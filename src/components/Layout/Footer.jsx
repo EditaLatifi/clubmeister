@@ -49,7 +49,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="bg-[#590016] text-center py-4 text-[13px] sm:text-[15px] text-white font-poppins">
-        Copyright © 2025 Clubmeister | Powered by Berna Consulting
+        Copyright © 2025 Clubmeister | Powered <a href="https://www.ecode-ks.com/">by eCode </a>
       </div>
     </footer>
   );

@@ -35,16 +35,17 @@ const Section8 = () => {
     autoplay: true,
     autoplaySpeed: 5000,
     speed: 600,
-    slidesToShow: 1.5,
-    slidesToScroll: 1,
-    centerMode: false,
+    slidesToShow: 1,
+    centerMode: true,
+    centerPadding: "180px", // adjust based on your layout
     cssEase: "ease-in-out",
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 1,
           centerMode: false,
+          slidesToShow: 1,
+          centerPadding: "0px",
         },
       },
     ],
@@ -96,8 +97,8 @@ const Section8 = () => {
         <Slider ref={sliderRef} {...settings}>
           {testimonials.map((t, index) => (
          <div key={index} className="px-[15px] ml-4 lg:ml-0">
-         <div className="w-[90%] lg:w-[445px] lg:h-[538px] p-4 md:pt-[90px] mb:pb-[90px] mb:px-[80px] rounded-[10px] border border-gray-200 bg-white shadow-sm flex flex-col items-center text-center  space-y-[40px]">
-           <div className="flex flex-col items-center space-y-[16px]">
+<div className="overflow-hidden w-full max-w-[93%] lg:max-w-none lg:w-[340px] lg:h-[500px] p-4 pt-[40px] pb-[40px] rounded-[10px] border border-gray-200 bg-white shadow-sm flex flex-col items-center text-center space-y-[40px]">
+<div className="flex flex-col items-center space-y-[16px]">
              <Image
                src={avatar}
                alt={t.name}
