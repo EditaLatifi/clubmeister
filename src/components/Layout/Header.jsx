@@ -54,8 +54,8 @@ const Header = () => {
       <Link href="/login" className="hidden md:flex">
         <div className="flex items-center gap-2 px-3 py-2 border border-[#6D011C] bg-transparent text-[#6D011C] rounded-[7.5px] w-[206px] h-[60px] font-montserrat text-[16px] justify-center">
           <Image src={logo1} alt="icon" width={20} height={20} />
-          Log In
-        </div>
+          Sign In
+          </div>
       </Link>
 
       {/* Mobile Burger */}
@@ -88,7 +88,7 @@ const Header = () => {
           <Link href="/login" onClick={() => setMenuOpen(false)}>
             <div className="mt-4 flex items-center gap-2 px-4 py-3 border border-[#6D011C] bg- text-[#6D011C] rounded-[7.5px] w-[206px] h-[60px] justify-center">
               <Image src={logo1} alt="icon" width={20} height={20} />
-              Log In
+              Sign In
             </div>
           </Link>
         </div>
