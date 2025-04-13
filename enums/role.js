@@ -1,4 +1,3 @@
-// enums/role.js
 export const RoleEnum = {
   SUPER_ADMIN: 'superadmin',
   ADMIN: 'admin',

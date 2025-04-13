@@ -1,4 +1,4 @@
-// middlewares/superAdminMiddleware.js
+
 export const superAdminMiddleware = (req, res, next) => {
     try {
       if (!req.user || req.user.role !== 'SUPER_ADMIN') {

@@ -1,9 +1,7 @@
-// utils/axios.js
+
 import axios from 'axios';
 import axiosRetry from 'axios-retry';
 import { getAuthToken, getAdminAuthToken } from './token';
-
-// Marrim baseUrl nga .env (psh. NEXT_PUBLIC_API_URL)
 const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api';
 
 axiosRetry(axios, {
@@ -11,10 +9,6 @@ axiosRetry(axios, {
   retryDelay: (retryCount) => retryCount * 1000,
 });
 
-/**
- * Kjo funksion bën request me rolin e “user”.
- * Automatikisht shton Bearer token nga localStorage ose vendi ku ruani token-in.
- */
 export const userAPI = async (url, method = 'get', data = null) => {
   try {
     const token = getAuthToken();

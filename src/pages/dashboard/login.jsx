@@ -1,18 +1,12 @@
-// pages/dashboard/login.jsx
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import axios from 'axios';
 import Image from 'next/image';
 import Link from 'next/link';
-
 import { FaFacebookF, FaLinkedinIn, FaUser } from 'react-icons/fa';
 import { MdLockOutline } from 'react-icons/md';
-
-// Importojmë kontekstin e auth (kontrolloni rrugën e saktë)
 import { useDashboardAuth } from '../../../context/DashboardAuthContext';
-
-// Komponentë i thjeshtë për popup error
 const ErrorMessagePopup = ({ message, onClose }) => {
   return (
     <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-10">
@@ -28,45 +22,28 @@ const ErrorMessagePopup = ({ message, onClose }) => {
     </div>
   );
 };
-
 export default function DashboardLogin() {
   const router = useRouter();
-
-  // Marrim funksionin login nga konteksti
   const { login: loginContext } = useDashboardAuth();
-
-  // State lokal
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [token, setToken] = useState(null);
   const [errorMessage, setErrorMessage] = useState('');
-
-  // Funksioni që ekzekutohet kur shtypet "Login"
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      // Kërkesë te /api/admin/login
-      // Presim strukturë si { token, role, username }
       const { data } = await axios.post('/api/admin/login', {
         username,
         password,
       });
-      
-      // Ruaj token në state (opsionale)
       setToken(data.token);
-
-      // Ruaj në kontekst (për Sidebar, Header, etj.)
-      // Sigurohu që "role" vjen nga serveri si "superadmin" (nëse user është superadmin)
       loginContext({
         username: data.username,
-        role: data.role,   // PËRPUTHET me çka kthen serveri
+        role: data.role, 
         token: data.token,
       });
-
-      // Redirektohu pas suksesit
       router.push('/dashboard/dashboard');
     } catch (err) {
-      // Shfaq mesazhin e gabimit (p.sh. "Invalid credentials")
       setErrorMessage(
         err.response?.data?.message || 'Login failed. Please check your credentials.'
       );
@@ -75,7 +52,6 @@ export default function DashboardLogin() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-[#F8F8F8] px-4">
-      {/* Nëse ka error, shfaq popup-in */}
       {errorMessage && (
         <ErrorMessagePopup
           message={errorMessage}
@@ -85,14 +61,12 @@ export default function DashboardLogin() {
 
       <main className="flex flex-col items-center justify-center w-full flex-1 text-center">
         <div className="bg-white rounded-2xl shadow-2xl flex flex-col md:flex-row w-full max-w-4xl">
-          {/* Krahët e majtë: forma e login-it */}
           <div className="w-full md:w-3/5 p-5">
             <h2 className="text-3xl font-bold text-black mt-9">Sign in to Dashboard</h2>
             <div className="border-2 w-10 border-black inline-block mb-2"></div>
             <div className="text-gray-400 my-3">Use your username and password</div>
 
             <form onSubmit={handleLogin} className="space-y-4 bg-white">
-              {/* Fusha për username */}
               <div className="flex flex-col items-center">
                 <div className="w-full md:w-1/2 bg-gray-100 p-2 flex items-center">
                   <FaUser className="text-gray-400 m-2" />
@@ -105,8 +79,6 @@ export default function DashboardLogin() {
                   />
                 </div>
               </div>
-
-              {/* Fusha për password */}
               <div className="flex flex-col items-center">
                 <div className="w-full md:w-1/2 bg-gray-100 p-2 flex items-center">
                   <MdLockOutline className="text-gray-400 m-2" />
@@ -119,8 +91,6 @@ export default function DashboardLogin() {
                   />
                 </div>
               </div>
-
-              {/* Butoni "Login" */}
               <button
                 className="border-2 border-[#a93258] rounded-full inline-block font-semibold hover:bg-[#a93258] hover:text-white text-[#a93258] py-2 w-1/4"
                 type="submit"
@@ -128,16 +98,12 @@ export default function DashboardLogin() {
                 Login
               </button>
             </form>
-
-            {/* Opsionale: tregon tokenin nese doni ta shihni */}
             {token && (
               <p className="text-center mt-4 text-sm text-green-600">
                 Your JWT: {token}
               </p>
             )}
           </div>
-
-          {/* Krahët e djathtë: Logo & rrjetet sociale */}
           <div className="bg-[#F8F9FA] w-full md:w-2/5 text-black rounded-b-2xl md:rounded-tr-2xl md:rounded-br-2xl py-9 px-12">
             <div className="flex justify-center font-bold">
               <Image src="/insi.png" alt="Logo" width={400} height={500} />

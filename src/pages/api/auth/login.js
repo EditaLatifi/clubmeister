@@ -1,7 +1,6 @@
-// pages/api/auth/login.js
 
 import { getConnection } from '../../../../lib/db';
-import bcrypt from 'bcrypt';    // Nëse ke password hashed
+import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
 export default async function handler(req, res) {
@@ -13,9 +12,7 @@ export default async function handler(req, res) {
     if (!username || !password) {
       return res.status(400).json({ message: 'Missing username/password' });
     }
-
     const pool = await getConnection();
-    // Supozojmë se ke një tabelë `users` me kolona: id, username, password, role
     const [rows] = await pool.query(
       'SELECT * FROM users WHERE username = ? LIMIT 1',
       [username]
@@ -26,13 +23,10 @@ export default async function handler(req, res) {
     }
 
     const user = rows[0];
-    // Kontollo password (nëse e ke hashed me bcrypt)
     const match = await bcrypt.compare(password, user.password);
     if (!match) {
       return res.status(400).json({ message: 'Invalid credentials' });
     }
-
-    // Gjithçka OK, krijo token (opsionale)
     const token = jwt.sign(
       {
         id: user.id,
@@ -42,9 +36,6 @@ export default async function handler(req, res) {
       process.env.JWT_SECRET,
       { expiresIn: '1h' }
     );
-
-    // Kthe info te front-end
-    // (p.sh. mos kthe password, vetëm rolin, user id, etj.)
     return res.status(200).json({
       id: user.id,
       username: user.username,

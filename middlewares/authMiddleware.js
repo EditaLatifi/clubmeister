@@ -1,4 +1,3 @@
-// middlewares/authMiddleware.js
 import jwt from 'jsonwebtoken';
 
 export const authMiddleware = (req, res, next) => {
@@ -12,10 +11,7 @@ export const authMiddleware = (req, res, next) => {
     if (!token) {
       return res.status(401).json({ message: 'Invalid token format' });
     }
-
-    // Verifikojmë JWT-në
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    // Ruajmë të dhënat në req.user
     req.user = decoded;
 
     next();

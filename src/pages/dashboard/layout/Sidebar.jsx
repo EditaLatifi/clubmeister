@@ -19,10 +19,6 @@ const Sidebar = ({ children }) => {
   const { user } = useDashboardAuth();
   const router = useRouter();
   const [SidebarOpen, setSidebarOpen] = useState(false);
-
-  // SHIH KËTU
-  console.log('Sidebar -> user:', user);
-
   const toggleSidebar = () => {
     setSidebarOpen(!SidebarOpen);
   };
