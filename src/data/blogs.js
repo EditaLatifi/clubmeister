@@ -58,6 +58,8 @@ export const blogPosts = [
     author: "Admin",
     date: "2024-04-08",
     tags: ["events", "planning"],
+    content: [] // 👈 Add this empty array if there's no content yet
+
   }, {
     id: "event-strategy",
     title: "Event Strategy 101",
@@ -66,6 +68,8 @@ export const blogPosts = [
     author: "Admin",
     date: "2024-04-08",
     tags: ["events", "planning"],
+    content: [] // 👈 Add this empty array if there's no content yet
+
   }, {
     id: "event-strategy",
     title: "Event Strategy 101",
@@ -74,6 +78,8 @@ export const blogPosts = [
     author: "Admin",
     date: "2024-04-08",
     tags: ["events", "planning"],
+    content: [] // 👈 Add this empty array if there's no content yet
+
   },
   {
     id: "event-strategy",
@@ -83,6 +89,8 @@ export const blogPosts = [
     author: "Admin",
     date: "2024-04-08",
     tags: ["events", "planning"],
+    content: [] // 👈 Add this empty array if there's no content yet
+
   },
   {
     id: "event-strategy",
@@ -92,6 +100,8 @@ export const blogPosts = [
     author: "Admin",
     date: "2024-04-08",
     tags: ["events", "planning"],
+    content: [] // 👈 Add this empty array if there's no content yet
+
   }, {
     id: "event-strategy",
     title: "Event Strategy 101",
@@ -100,6 +110,8 @@ export const blogPosts = [
     author: "Admin",
     date: "2024-04-08",
     tags: ["events", "planning"],
+    content: [] // 👈 Add this empty array if there's no content yet
+
   },
   // Add more here
 ];

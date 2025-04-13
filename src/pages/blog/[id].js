@@ -77,7 +77,7 @@ const BlogDetailPage = () => {
 
         {/* Content */}
         <article className="max-w-[720px] mx-auto space-y-10 text-[#475467] text-[18px] leading-[28px]">
-          {post.content.map((block, i) => (
+        {post.content && post.content.length > 0 && post.content.map((block, i) => (
             <div key={i} className="space-y-5">
               {block.heading && block.heading !== "Conclusion" && (
                 <h2 className="text-[30px] font-semibold text-[#101828]">
