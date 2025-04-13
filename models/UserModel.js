@@ -1,4 +1,4 @@
-import { getConnection } from '../utils/db';
+import { getConnection } from '../lib/db';
 import bcrypt from 'bcrypt';
 
 export const UserModel = {

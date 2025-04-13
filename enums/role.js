@@ -1,7 +1,6 @@
-// role.js
+// enums/role.js
 export const RoleEnum = {
-    SUPER_ADMIN: 'superadmin',
-    ADMIN: 'admin',
-    USER: 'user',
-  };
-  
+  SUPER_ADMIN: 'superadmin',
+  ADMIN: 'admin',
+  USER: 'user',
+};

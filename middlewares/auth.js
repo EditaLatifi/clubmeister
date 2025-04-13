@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import { RoleEnum } from '../enums/role';
+import { RoleEnum } from '../enums';
 
 export function authMiddleware(handler) {
   return async (req, res) => {
