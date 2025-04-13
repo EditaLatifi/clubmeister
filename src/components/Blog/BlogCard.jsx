@@ -12,7 +12,7 @@ const BlogCard = ({ post, isLarge = false }) => {
             alt={post.title}
             width={isLarge ? 700 : 400}
             height={isLarge ? 300 : 300}
-            className="w-full object-cover h-auto"
+            className="w-full h-[240px] object-cover"
           />
         </div>
 
