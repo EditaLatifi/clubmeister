@@ -17,7 +17,7 @@ const CategoryCard = ({ image, label, width, height }) => {
 
       <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition duration-300" />
       <div className="absolute inset-0 flex items-center justify-center">
-        <h3 className="text-white text-[52px] font-[700] text-center px-2">
+        <h3 className="text-white text-[40px] lg:text-[52px] font-[700] text-center px-2">
           {label}
         </h3>
       </div>

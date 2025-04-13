@@ -204,52 +204,54 @@ const BlogDetailPage = () => {
 
       {/* Pagination */}
       <section className="max-w-[1300px] mx-auto px-4 pt-10 pb-32">
-        <div className="flex justify-between items-center text-[14px] text-[#475467]">
-          {/* ← Previous */}
-          <button
-            onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
-            disabled={page === 1}
-            className="flex items-center gap-2 font-[600] disabled:opacity-50"
-          >
-            <Image src="/arrow-left.svg" alt="Previous" width={16} height={16} />
-            Previous
-          </button>
+  <div className="flex flex-wrap justify-center sm:justify-between items-center gap-4 text-[14px] text-[#475467]">
+    
+    {/* ← Previous */}
+    <button
+      onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
+      disabled={page === 1}
+      className="flex items-center gap-2 font-[600] disabled:opacity-50 whitespace-nowrap"
+    >
+      <Image src="/arrow-left.svg" alt="Previous" width={16} height={16} />
+      Previous
+    </button>
 
-          {/* Page Numbers */}
-          <div className="flex gap-3">
-            {pageNumbers.map((n, i) => (
-              <button
-                key={i}
-                onClick={() => typeof n === "number" && setPage(n)}
-                disabled={n === "..."}
-                className={`w-8 h-8 rounded-full font-[500] flex items-center justify-center ${
-                  n === page
-                    ? "bg-[#F9FAFB] text-[#1D2939]"
-                    : "text-[#475467] hover:bg-[#F2F4F7]"
-                }`}
-              >
-                {n}
-              </button>
-            ))}
-          </div>
+    {/* Page Numbers */}
+    <div className="flex flex-wrap justify-center gap-2">
+      {pageNumbers.map((n, i) => (
+        <button
+          key={i}
+          onClick={() => typeof n === "number" && setPage(n)}
+          disabled={n === "..."}
+          className={`w-8 h-8 text-sm rounded-full font-[500] flex items-center justify-center transition ${
+            n === page
+              ? "bg-[#F9FAFB] text-[#1D2939]"
+              : "text-[#475467] hover:bg-[#F2F4F7]"
+          }`}
+        >
+          {n}
+        </button>
+      ))}
+    </div>
 
-          {/* Next → */}
-          <button
-            onClick={() => setPage((prev) => Math.min(prev + 1, totalPages))}
-            disabled={page === totalPages}
-            className="flex items-center gap-2 font-[600] disabled:opacity-50"
-          >
-            Next
-            <Image
-              src="/arrow-left.svg"
-              alt="Next"
-              width={16}
-              height={16}
-              className="rotate-180"
-            />
-          </button>
-        </div>
-      </section>
+    {/* Next → */}
+    <button
+      onClick={() => setPage((prev) => Math.min(prev + 1, totalPages))}
+      disabled={page === totalPages}
+      className="flex items-center gap-2 font-[600] disabled:opacity-50 whitespace-nowrap"
+    >
+      Next
+      <Image
+        src="/arrow-left.svg"
+        alt="Next"
+        width={16}
+        height={16}
+        className="rotate-180"
+      />
+    </button>
+  </div>
+</section>
+
     </Layout>
   );
 };
