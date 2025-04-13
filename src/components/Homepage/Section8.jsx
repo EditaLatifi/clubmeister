@@ -97,7 +97,7 @@ const Section8 = () => {
         <Slider ref={sliderRef} {...settings}>
           {testimonials.map((t, index) => (
          <div key={index} className="px-[15px] ml-4 lg:ml-0">
-         <div className="w-[90%] lg:w-[340px] lg:h-[500px] p-4 md:pt-[90px] mb:pb-[90px] mb:px-[80px] rounded-[10px] border border-gray-200 bg-white shadow-sm flex flex-col items-center text-center  space-y-[40px]">
+         <div className="overflow-hidden w-[93%] lg:w-[340px] lg:h-[500px] p-4 md:pt-[90px] mb:pb-[90px] mb:px-[80px] rounded-[10px] border border-gray-200 bg-white shadow-sm flex flex-col items-center text-center  space-y-[40px]">
            <div className="flex flex-col items-center space-y-[16px]">
              <Image
                src={avatar}
