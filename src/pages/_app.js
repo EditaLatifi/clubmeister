@@ -1,8 +1,12 @@
-import "@/styles/globals.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import '../styles/globals.css';
+import { DashboardAuthProvider } from '../../context/DashboardAuthContext';
 
-
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+function MyApp({ Component, pageProps }) {
+  return (
+    <DashboardAuthProvider>
+      <Component {...pageProps} />
+    </DashboardAuthProvider>
+  );
 }
+
+export default MyApp;
