@@ -1,11 +1,13 @@
 {
   "name": "clubmeister",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "migrate": "node migrations/index.js",
     "lint": "next lint"
   },
   "dependencies": {
@@ -14,6 +16,7 @@
     "axios": "^1.8.4",
     "axios-retry": "^4.5.0",
     "bcrypt": "^5.1.1",
+    "dotenv": "^16.5.0",
     "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.487.0",
     "mysql2": "^3.14.0",
